@@ -23,7 +23,9 @@ public class DbAdapter {
     public final static String DATABASE_NAME = "repairs";
     public final static String DATABASE_TABLE = "tbl_repairs";
     public final static int DATABASE_VERSION = 1;
-
+    public static final String DATABASE_CREATE_REPAIRS = "create table tbl_repairs_Completed" +
+            " (_id integer primary key autoincrement, ticketNumber int not null," +
+            "in_date text not null, ";
     public static  final String DATABASE_CREATE = "create table tbl_repairs(_id integer primary key autoincrement,da text not null, name text not null, " +
             "repair text not null, repair_other text not null, number_items text not null, num text not null, price text not null);";
 
