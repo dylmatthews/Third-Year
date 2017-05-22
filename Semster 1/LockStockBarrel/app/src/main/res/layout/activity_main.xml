@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="a15009851.dylanmatthews.lockstockbarrel.MainActivity">
+    tools:context="a15009851.dylanmatthews.lockstockbarrel.insertRepair">
 
     <EditText
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
         android:ems="10"
 
         android:layout_alignParentStart="true"
-        android:id="@+id/etName"
+        android:id="@+id/etUpdateName"
         android:hint="Enter Customers Name" />
 
     <EditText
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/etNumber"
+        android:layout_below="@+id/etUpdateNumber"
         android:layout_alignParentStart="true"
-        android:id="@+id/etRepair"
+        android:id="@+id/etUpdateRepair"
         android:hint="Repair" />
 
     <EditText
@@ -35,9 +35,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/etRepair"
+        android:layout_below="@+id/etUpdateRepair"
         android:layout_alignParentStart="true"
-        android:id="@+id/etRepairExtra"
+        android:id="@+id/etUpdateRepairExtra"
         android:hint="Repair Other" />
 
     <EditText
@@ -45,10 +45,10 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_below="@+id/etRepairExtra"
+        android:layout_below="@+id/etUpdateRepairExtra"
         android:layout_alignParentStart="true"
         android:id="@+id/etNumItems"
-        android:hint="Number Of Itmes" />
+        android:hint="Number Of Items" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,48 +57,30 @@
         android:ems="10"
         android:layout_below="@+id/etNumItems"
         android:layout_alignParentStart="true"
-        android:id="@+id/etCost"
+        android:id="@+id/etUpdateCost"
         android:hint="Cost" />
-
-    <Button
-        android:text="Insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCost"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="14dp"
-        android:id="@+id/btnInsert"
-        android:onClick="addRepair" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/etNumber"
+        android:id="@+id/etUpdateNumber"
         android:hint="Cellphone Number"
-        android:layout_below="@+id/etName"
+        android:layout_below="@+id/etUpdateName"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Search"
+        android:text="Insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnInsert"
+        android:layout_marginTop="72dp"
+        android:id="@+id/btnInsert"
+        android:onClick="addRepair"
+        android:layout_below="@+id/etUpdateCost"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="79dp"
-        android:id="@+id/btnSearch"
-        android:onClick="onSearch" />
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Repair Fetched"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnInsert"
-        android:layout_alignStart="@+id/btnInsert"
-        android:layout_marginTop="42dp"
-        android:id="@+id/btnRepairFetched"
-        android:onClick="onRepairFetched" />
 
 </RelativeLayout>

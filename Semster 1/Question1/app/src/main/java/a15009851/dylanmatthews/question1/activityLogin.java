@@ -1,5 +1,6 @@
 package a15009851.dylanmatthews.question1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -47,7 +48,7 @@ public class activityLogin extends AppCompatActivity {
                //textFileData += line + "\n";
 
             }
-          //  toast(textFileData);
+           display("File Loaded Successfully");
 
         }
         catch (IOException e)
@@ -87,10 +88,12 @@ public class activityLogin extends AppCompatActivity {
         if(found)
         {
             display("Login Successful");
+            Intent dis = new Intent(this, display.class);
+            startActivity(dis);
         }
         else
         {
-            display("Username doesn't exist");
+            display("Login UnSuccessful");
         }
     }
 

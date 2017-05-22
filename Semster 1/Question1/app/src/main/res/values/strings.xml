@@ -9,5 +9,5 @@
     <string name="nameResetPassword">Name to reset password</string>
     <string name="btnForgotPassword">Forgot Password</string>
     <string name="forgotPasswordNewPassword">New Password</string>
-    <string name ="btnResetPassword">Reset Password</string>
+    <string name="btnResetPassword">Reset Password</string>
 </resources>

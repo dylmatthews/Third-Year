@@ -15,7 +15,13 @@ public class ViewResults extends AppCompatActivity {
         displayResults = (TextView) findViewById(R.id.tvDisplayResults);
 
         String results = getIntent().getStringExtra("results");
-        displayResults.setText(results);
+        if (results.equals(""))
+        {
+            displayResults.setText("No results found");
+        }
+        else {
+            displayResults.setText(results);
+        }
     }
 
 

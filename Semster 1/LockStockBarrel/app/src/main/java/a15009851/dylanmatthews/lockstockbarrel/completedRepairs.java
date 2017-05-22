@@ -3,6 +3,8 @@ package a15009851.dylanmatthews.lockstockbarrel;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,7 +34,12 @@ public class completedRepairs extends AppCompatActivity {
         dbAdapter = new DbAdapter(this);
         etTicket = (EditText) findViewById(R.id.etSearchTicketNum);
     }
-
+    public void toast(String t)
+    {
+        Toast output= Toast.makeText(this, t, Toast.LENGTH_SHORT);
+        output.setGravity(Gravity.CENTER,0,0);
+        output.show();
+    }
 
     public void onCollected(View view)
     {
@@ -51,24 +58,11 @@ public class completedRepairs extends AppCompatActivity {
             Dateout = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
             dbAdapter.deleteRepair(ticketNum);
             dbAdapter.insertIntoCompleted(ticketNum,name,repair, repairOther, items, number, DateIn, Dateout, Cost);
-            Toast.makeText(this, "moved done", Toast.LENGTH_SHORT).show();
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+            toast("moved done");
+       }
         catch(Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-
+           toast("Ticket number isn't in the repairs table");
+            Log.i("test", e.getMessage());
         }
     }
 }

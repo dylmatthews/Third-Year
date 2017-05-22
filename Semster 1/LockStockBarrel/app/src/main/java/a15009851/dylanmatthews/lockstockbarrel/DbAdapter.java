@@ -193,7 +193,7 @@ public class DbAdapter {
         return  mCursor;
     }
 
-    public boolean updateRepair(long RepairId, String name, String repair, String repairOther, String numItems, String cellphone, String date ,String price)
+    public boolean updateRepair(long RepairId, String name, String repair, String repairOther, String numItems, String cellphone ,String price)
     {
 
         ContentValues initialValues = new ContentValues();
@@ -202,7 +202,6 @@ public class DbAdapter {
         initialValues.put(KEY_REPAIR_OTHER,repairOther);
         initialValues.put(KEY_NUMBER_ITEMS, numItems);
         initialValues.put(KEY_CELLPHONE, cellphone);
-        initialValues.put(KEY_DATE, date);
         initialValues.put(KEY_PRICE,price);
         return db.update(DATABASE_TABLE,initialValues,KEY_TICKETID+"="+RepairId,null)>0;
     }
@@ -214,18 +213,33 @@ public class DbAdapter {
             db.execSQL(DATABASE_CREATE_REPAIRSCompleted);
         }
         catch (Exception e){
+            Log.i("test", e.getMessage());
 
          }
-        ContentValues initialValues = new ContentValues();
-        initialValues.put( KEY_TCIKETIDcompleed,ticketNum);
-        initialValues.put(KEY_NAMECompleted, name);
-        initialValues.put(KEY_REPAIRcompleted,repair);
-        initialValues.put(KEY_REPAIR_OTHERCompleted,repairOther);
-        initialValues.put(KEY_NUMBER_ITEMSCompleted, numItems);
-        initialValues.put(KEY_CELLPHONECompleted, cellphone);
-        initialValues.put(KEY_DATEIn, dateIN);
-        initialValues.put(KEY_DATEOut, dateout);
-        initialValues.put(KEY_PRICECompleted,price);
-        return db.insert(DATABASE_TABLECompleted,null,initialValues);
+        try {
+            ContentValues initialValues = new ContentValues();
+            initialValues.put(KEY_TCIKETIDcompleed, ticketNum);
+            initialValues.put(KEY_NAMECompleted, name);
+            initialValues.put(KEY_REPAIRcompleted, repair);
+            initialValues.put(KEY_REPAIR_OTHERCompleted, repairOther);
+            initialValues.put(KEY_NUMBER_ITEMSCompleted, numItems);
+            initialValues.put(KEY_CELLPHONECompleted, cellphone);
+            initialValues.put(KEY_DATEIn, dateIN);
+            initialValues.put(KEY_DATEOut, dateout);
+            initialValues.put(KEY_PRICECompleted, price);
+            return db.insert(DATABASE_TABLECompleted, null, initialValues);
+        }
+        catch (Exception e)
+        {
+            Log.i("test insert", e.getMessage());
+        }
+        return 1;
+    }
+
+    public Cursor getAllCompleted()
+    {
+        return db.query(DATABASE_TABLECompleted,new String[] {KEY_TCIKETIDcompleed,KEY_NAMECompleted,KEY_REPAIRcompleted
+                ,KEY_REPAIR_OTHERCompleted, KEY_NUMBER_ITEMSCompleted,KEY_CELLPHONECompleted, KEY_DATEIn,KEY_DATEOut,
+                KEY_PRICECompleted},null,null,null,null,null);
     }
 }
