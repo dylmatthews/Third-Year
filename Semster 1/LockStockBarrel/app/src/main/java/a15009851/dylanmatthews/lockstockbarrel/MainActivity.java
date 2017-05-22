@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(search);
     }
 
+    public  void onRepairFetched(View view)
+    {
+        Intent fetched = new Intent(this, completedRepairs.class);
+        startActivity(fetched);
+    }
 
 
 }

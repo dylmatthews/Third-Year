@@ -22,16 +22,30 @@ public class DbAdapter {
     public static final String TAG = "DBAdapter";
     public final static String DATABASE_NAME = "repairs";
     public final static String DATABASE_TABLE = "tbl_repairs";
+
     public final static int DATABASE_VERSION = 1;
-    public static final String DATABASE_CREATE_REPAIRS = "create table tbl_repairs_Completed" +
-            " (_id integer primary key autoincrement, ticketNumber int not null," +
-            "in_date text not null, ";
+
     public static  final String DATABASE_CREATE = "create table tbl_repairs(_id integer primary key autoincrement,da text not null, name text not null, " +
             "repair text not null, repair_other text not null, number_items text not null, num text not null, price text not null);";
 
     final Context context;
     DatabaseHelper DBHelper;
     SQLiteDatabase db;
+    public final static String DATABASE_TABLECompleted = "tbl_repairs_Completed";
+    public static final String KEY_IDcompleted = "_id";
+    public static final String  KEY_TCIKETIDcompleed = "ticketNumber";
+    public static final String KEY_NAMECompleted = "name";
+    public static final String KEY_REPAIRcompleted = "repair";
+    public static final String KEY_REPAIR_OTHERCompleted = "repair_other";
+    public static final String KEY_NUMBER_ITEMSCompleted= "number_items";
+    public static final String KEY_CELLPHONECompleted = "cellphone";
+    public static final String KEY_DATEIn = "dateIn";
+    public static final String KEY_DATEOut = "dateFetched";
+    public static final String KEY_PRICECompleted = "price";
+    public static final String DATABASE_CREATE_REPAIRSCompleted = "create table tbl_repairs_Completed" +
+            " (_id integer primary key autoincrement, ticketNumber int not null," + "name text not null,"+
+            "repair  text not null, " + "repair_other text not null," + "number_items text not null,"
+            + "cellphone text not null," + "dateIn text not null," + "dateFetched text not null , price text not null);" ;
 
     public DbAdapter(Context context) {
         this.context = context;
@@ -49,24 +63,25 @@ public class DbAdapter {
         //On Create method
         @Override
         public void onCreate(SQLiteDatabase db)
-        { Log.i("shit ", "before db create "  );
+        { Log.i("test ", "before db create "  );
             try
             {
                 db.execSQL(DATABASE_CREATE);
-                Log.i("shit ", "db create "  );
+                db.execSQL(DATABASE_CREATE_REPAIRSCompleted);
+                Log.i("test ", "db create "  );
             }
             catch (SQLException e)
             {
                 e.printStackTrace();
-                Log.i("shit ", "catch db create "  );
+                Log.i("test ", "catch db create "  );
             }
-            Log.i("shit ", "after db create "  );
+            Log.i("test ", "after db create "  );
         }
         // Upgrade Method
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
         {
             Log.w(TAG,"Upgrading DB from version : "+ oldVersion+" to : "+newVersion+" Which will destroy all data on it ");
-            db.execSQL("DROP TABLE IF EXISTS tbl_repairs");
+            db.execSQL("DROP TABLE IF EXISTS tbl_repairs; Drop TABLE IF EXISTS tbl_repairs_Completed");
             onCreate(db);
         }
     }
@@ -84,18 +99,19 @@ public class DbAdapter {
 
     public long insertRepair(String name, String repair, String repairOther, int numItems, String cellphone, String date ,String price )
     {
-        Log.i("shit ", "before db create "  );
+        Log.i("test ", "before db create "  );
         try
         {
             db.execSQL(DATABASE_CREATE);
-            Log.i("shit ", "db create "  );
+            db.execSQL(DATABASE_CREATE_REPAIRSCompleted);
+            Log.i("test", "db create "  );
         }
         catch (SQLException e)
         {
             e.printStackTrace();
-            Log.i("shit ", "catch db create "  );
+            Log.i("test ", "catch db create "  );
         }
-        Log.i("shit ", "after db create "  );
+        Log.i("test ", "after db create "  );
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_NAME, name);
         initialValues.put(KEY_REPAIR,repair);
@@ -189,5 +205,27 @@ public class DbAdapter {
         initialValues.put(KEY_DATE, date);
         initialValues.put(KEY_PRICE,price);
         return db.update(DATABASE_TABLE,initialValues,KEY_TICKETID+"="+RepairId,null)>0;
+    }
+
+    public long insertIntoCompleted(long ticketNum, String name, String repair, String repairOther,
+    String numItems,String cellphone, String dateIN, String dateout, String price)
+    {
+        try {
+            db.execSQL(DATABASE_CREATE_REPAIRSCompleted);
+        }
+        catch (Exception e){
+
+         }
+        ContentValues initialValues = new ContentValues();
+        initialValues.put( KEY_TCIKETIDcompleed,ticketNum);
+        initialValues.put(KEY_NAMECompleted, name);
+        initialValues.put(KEY_REPAIRcompleted,repair);
+        initialValues.put(KEY_REPAIR_OTHERCompleted,repairOther);
+        initialValues.put(KEY_NUMBER_ITEMSCompleted, numItems);
+        initialValues.put(KEY_CELLPHONECompleted, cellphone);
+        initialValues.put(KEY_DATEIn, dateIN);
+        initialValues.put(KEY_DATEOut, dateout);
+        initialValues.put(KEY_PRICECompleted,price);
+        return db.insert(DATABASE_TABLECompleted,null,initialValues);
     }
 }

@@ -21,7 +21,8 @@
         <activity android:name=".searchDate" />
         <activity android:name=".searchNumber" />
         <activity android:name=".searchAll" />
-        <activity android:name=".ViewResults"></activity>
+        <activity android:name=".ViewResults" />
+        <activity android:name=".completedRepairs"></activity>
     </application>
 
 </manifest>

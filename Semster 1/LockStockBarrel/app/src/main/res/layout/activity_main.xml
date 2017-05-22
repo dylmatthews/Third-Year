@@ -91,4 +91,14 @@
         android:id="@+id/btnSearch"
         android:onClick="onSearch" />
 
+    <Button
+        android:text="Repair Fetched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnInsert"
+        android:layout_alignStart="@+id/btnInsert"
+        android:layout_marginTop="42dp"
+        android:id="@+id/btnRepairFetched"
+        android:onClick="onRepairFetched" />
+
 </RelativeLayout>
