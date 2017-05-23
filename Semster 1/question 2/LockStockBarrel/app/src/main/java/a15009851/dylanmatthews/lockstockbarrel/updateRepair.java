@@ -1,9 +1,11 @@
 package a15009851.dylanmatthews.lockstockbarrel;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static java.lang.Long.parseLong;
 
@@ -22,6 +24,7 @@ public class updateRepair extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_repair);
         dbAdapter = new DbAdapter(this);
+        dbAdapter.open();
         name = (EditText) findViewById(R.id.etUpdateName);
         repair = (EditText) findViewById(R.id.etUpdateRepair);
         repairOther = (EditText) findViewById(R.id.etUpdateRepairExtra);
@@ -45,6 +48,9 @@ public class updateRepair extends AppCompatActivity {
 
 
         dbAdapter.updateRepair(i,na, re, reo,numI,cell, cos);
+        Toast.makeText(this, "Update Successful", Toast.LENGTH_SHORT).show();
+        Intent home  = new Intent(this, home.class);
+        startActivity(home);
     }
 
 

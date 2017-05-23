@@ -15,6 +15,7 @@ public class searchByCompletedRepairs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_by_completed_repairs);
         dbAdapter = new DbAdapter(this);
+        dbAdapter.open();
     }
 
     public void onShowCompleted(View view) {
@@ -34,7 +35,7 @@ public class searchByCompletedRepairs extends AppCompatActivity {
                                     "Number of items : " + dbCursor.getString(4) + "\n" +
                                     "Cellphone Number : " + dbCursor.getString(5) + "\n" +
                                     "Date : " + dbCursor.getString(6) + "\n" +
-                                    "Price : " + dbCursor.getString(7) + "\n---------------------------------------------------------------\n";
+                                    "Price : " + dbCursor.getString(8) + "\n---------------------------------------------------------------\n";
                         } else {
                             allRepairRecords += "\nTicket Number: " + dbCursor.getInt(0) + "\n" +
                                     "Name : " + dbCursor.getString(1) + "\n" +
@@ -43,7 +44,7 @@ public class searchByCompletedRepairs extends AppCompatActivity {
                                     "Number of items : " + dbCursor.getString(4) + "\n" +
                                     "Cellphone Number : " + dbCursor.getString(5) + "\n" +
                                     "Date : " + dbCursor.getString(6) + "\n" +
-                                    "Price : " + dbCursor.getString(7) + "\n---------------------------------------------------------------\n";
+                                    "Price : " + dbCursor.getString(8) + "\n---------------------------------------------------------------\n";
                         }
 
                     }
