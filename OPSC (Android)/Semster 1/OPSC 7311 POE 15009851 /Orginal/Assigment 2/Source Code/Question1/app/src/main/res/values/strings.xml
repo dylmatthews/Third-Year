@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Question1</string>
+    <string name="title_activity_home">home</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnSignup">Sign Up</string>
+    <string name="hintName">Name</string>
+    <string name="hintPassword">Password</string>
+    <string name="hintComfirmPasword">Comfirm Password</string>
+    <string name="nameResetPassword">Name to reset password</string>
+    <string name="btnForgotPassword">Forgot Password</string>
+    <string name="forgotPasswordNewPassword">New Password</string>
+    <string name="btnResetPassword">Reset Password</string>
+</resources>
