@@ -611,7 +611,7 @@ public class MainActivity extends AppCompatActivity {
         else if (cnt6>=4)
         {
             fourKind = true;
-            Toast.makeText(this, "Three 6s", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Four 6s", Toast.LENGTH_SHORT).show();
         }
 
         if (fourKind)
@@ -626,7 +626,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //to search for four of a kind
+        //to search for four of a kind first attempt to do it
         /*for (int i=0; i<6;i++)
         {
             for (int y=i+1;y<6;y++)
@@ -660,7 +660,8 @@ public class MainActivity extends AppCompatActivity {
     public void onp14Kind(View v) {
         try {
 
-
+            for (int i=0;i<5;i++)
+                rolls[i] =4;
             Button btn = (Button) (findViewById(R.id.btn4KindP1));
             btn.setText(fourOfKind());
             scorep1 = scorep1 + Integer.parseInt(fourOfKind());

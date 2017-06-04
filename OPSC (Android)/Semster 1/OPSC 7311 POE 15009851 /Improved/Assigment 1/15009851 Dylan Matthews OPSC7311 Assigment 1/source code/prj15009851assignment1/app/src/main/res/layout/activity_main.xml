@@ -12,7 +12,6 @@
     tools:context="dylanmatthews15009851.com.prj15009851assignment1.MainActivity">
 
 
-
     <EditText
         android:inputType="none"
         android:text="@string/user1"
@@ -143,7 +142,8 @@
         android:layout_marginStart="12dp"
         android:id="@+id/ThreeOfKind"
         android:editable="false"
-        tools:textSize="@dimen/text_size_medium_material" />
+        tools:textSize="@dimen/text_size_medium_material"
+        android:singleLine="false" />
 
     <EditText
         android:inputType="none"
@@ -298,15 +298,6 @@
         android:onClick="onp13Kind"
         android:layout_above="@+id/fourOfKind"
         android:layout_toEndOf="@+id/ThreeOfKind" />
-
-    <Button
-        android:layout_width="45dp"
-        android:id="@+id/btn3KindP2"
-        android:layout_height="45dp"
-        android:onClick="onp23Kind"
-        android:layout_alignBaseline="@+id/btn3KindP1"
-        android:layout_alignBottom="@+id/btn3KindP1"
-        android:layout_toEndOf="@+id/btn3KindP1" />
 
     <Button
         android:layout_width="45dp"
@@ -479,6 +470,15 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/button4"
         android:onClick="Clear" />
+
+    <Button
+        android:layout_width="45dp"
+        android:id="@+id/btn3KindP2"
+        android:layout_height="45dp"
+        android:onClick="onp23Kind"
+        android:layout_alignBottom="@+id/ThreeOfKind"
+        android:layout_alignParentEnd="true" />
+
 
 
 </RelativeLayout>
