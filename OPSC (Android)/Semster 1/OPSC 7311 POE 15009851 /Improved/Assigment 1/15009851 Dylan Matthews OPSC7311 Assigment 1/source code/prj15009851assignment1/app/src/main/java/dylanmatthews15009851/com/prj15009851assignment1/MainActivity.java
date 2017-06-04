@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton three ;
     private ImageButton four ;
     private ImageButton five;
+
     private int scorep1=0;
     private int scorep2=0;
 
@@ -37,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         three = (ImageButton)findViewById(R.id.image3);
         four =  (ImageButton)findViewById(R.id.image4);
         five = (ImageButton)findViewById(R.id.image5);
-        five = (ImageButton)findViewById(R.id.image5);
-
         ImageID = new int[] //image array
                 {
                         R.drawable.one,
@@ -436,8 +435,74 @@ public class MainActivity extends AppCompatActivity {
 
     public String threeOfKind()
     {
-        Boolean found = false;
+
+
         int score=0;
+        int cnt1 =0;
+        int cnt2 =0;
+        int cnt3 = 0;
+        int cnt4 = 0;
+        int cnt5 = 0;
+        int cnt6 =0;
+        boolean threeKind=false;
+        for (int i =0; i<5;i++)
+        {
+
+            if (rolls[i]==1)
+            cnt1++;
+            else if (rolls[i]==2)
+                cnt2++;
+            else if (rolls[i]==3)
+                cnt3++;
+            else if (rolls[i]==4)
+                cnt4++;
+            else if (rolls[i]==5)
+                cnt5++;
+            else if (rolls[i]==6)
+                cnt6++;
+        }
+
+        if (cnt1>=3)
+        {
+            Toast.makeText(this, "Three Ones", Toast.LENGTH_SHORT).show();
+            threeKind = true;
+        }
+        else if (cnt2>=3)
+        {
+            Toast.makeText(this, "Three 2s", Toast.LENGTH_SHORT).show();
+            threeKind = true;
+        }
+        else if  (cnt3>=3)
+        {
+            threeKind = true;
+            Toast.makeText(this, "Three 3s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt4>=3)
+        {
+            threeKind = true;
+            Toast.makeText(this, "Three 4s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt5>=3)
+        {
+            threeKind = true;
+            Toast.makeText(this, "Three 5s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt6>=3)
+        {
+            threeKind = true;
+            Toast.makeText(this, "Three 6s", Toast.LENGTH_SHORT).show();
+        }
+
+        if (threeKind)
+        {
+            for (int i=0;i<5;i++)
+            {
+                int temp = rolls[i];
+                score = score + temp;
+            }
+        }
+
+
 //to search for three of a kind
         /*for (int i=0; i<6;i++)
         {
@@ -461,7 +526,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             score=0;
         }*/
-        score=0;
+
         return score+"";
 
     }
@@ -494,7 +559,72 @@ public class MainActivity extends AppCompatActivity {
     {
 
         int score=0;
-        Boolean found = false;
+        int cnt1 =0;
+        int cnt2 =0;
+        int cnt3 = 0;
+        int cnt4 = 0;
+        int cnt5 = 0;
+        int cnt6 =0;
+        boolean  fourKind=false;
+        for (int i =0; i<5;i++)
+        {
+
+            if (rolls[i]==1)
+                cnt1++;
+            else if (rolls[i]==2)
+                cnt2++;
+            else if (rolls[i]==3)
+                cnt3++;
+            else if (rolls[i]==4)
+                cnt4++;
+            else if (rolls[i]==5)
+                cnt5++;
+            else if (rolls[i]==6)
+                cnt6++;
+        }
+
+        if (cnt1>=4)
+        {
+            Toast.makeText(this, "Four Ones", Toast.LENGTH_SHORT).show();
+            fourKind = true;
+        }
+        else if (cnt2>=4)
+        {
+            Toast.makeText(this, "Four 2s", Toast.LENGTH_SHORT).show();
+            fourKind = true;
+        }
+        else if  (cnt3>=4)
+        {
+            fourKind = true;
+            Toast.makeText(this, "Four 3s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt4>=4)
+        {
+            fourKind = true;
+            Toast.makeText(this, "Four 4s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt5>=4)
+        {
+            fourKind = true;
+            Toast.makeText(this, "four 5s", Toast.LENGTH_SHORT).show();
+        }
+        else if (cnt6>=4)
+        {
+            fourKind = true;
+            Toast.makeText(this, "Three 6s", Toast.LENGTH_SHORT).show();
+        }
+
+        if (fourKind)
+        {
+            for (int i=0;i<5;i++)
+            {
+                int temp = rolls[i];
+                score = score + temp;
+            }
+        }
+
+
+
 
         //to search for four of a kind
         /*for (int i=0; i<6;i++)
@@ -523,7 +653,6 @@ public class MainActivity extends AppCompatActivity {
         else {
          score = 0;
         }*/
-        score = 0;
         return score+"";
 
     }
