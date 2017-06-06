@@ -11,6 +11,7 @@ public class activity_searchBY extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_by);
+
     }
 
     public void searchName(View view)

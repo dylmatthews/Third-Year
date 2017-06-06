@@ -9,15 +9,28 @@
     <item  android:title="Home"
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home_black_24dp" />
-    <item android:title="Insert"
+    <item android:title="Insert Repair"
         android:id="@+id/nav_insert"
         android:icon="@drawable/ic_add_black_48dp" />
+        <item android:title="Repair Collected"
+            android:id="@+id/nav_collected"
+            android:icon="@drawable/ic_done_black_48dp" />
+        <item android:title="Update Repair"
+            android:id="@+id/nav_update"
+            android:icon="@drawable/ic_update_black_48dp" />
     <item android:title="Search Date"
         android:icon="@drawable/ic_date_range_black_24dp"
-        android:id="@+id/mav_searchDate" />
+        android:id="@+id/nav_searchDate" />
     <item android:title="Search Phone Number"
         android:icon="@drawable/ic_phone_black_24dp"
         android:id="@+id/nav_searchPhone" />
+
+        <item android:title="Search Ticket Number"
+            android:id="@+id/nav_ticket"
+            android:icon="@drawable/ic_format_list_numbered_black_48dp" />
+        <item android:title="Search Name"
+            android:id="@+id/nav_name"
+            android:icon="@drawable/ic_text_format_black_48dp" />
     </group>
 
 

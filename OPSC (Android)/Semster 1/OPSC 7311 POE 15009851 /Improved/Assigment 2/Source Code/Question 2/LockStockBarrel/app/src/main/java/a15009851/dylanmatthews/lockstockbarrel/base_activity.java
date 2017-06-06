@@ -22,12 +22,7 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
 
     protected void onCreateDrawer() {
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-      //  drawerLayout = (DrawerLayout) findViewById(R.id.nav_view);
        navigationView.setNavigationItemSelectedListener(this);
-        //tongle = new ActionBarDrawerToggle(this,drawerLayout, R.string.open, R.string.close);
-        //drawerLayout.addDrawerListener(tongle);
-        //tongle.syncState();
-      //getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -40,11 +35,39 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Toast.makeText(this, "going to " + id, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "going to " + id, Toast.LENGTH_SHORT).show();
         if (id==R.id.nav_home)
         {
-            Toast.makeText(this, "going to " + id, Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), home.class));
+        }
+        else if (id==R.id.nav_insert)
+        {
+            startActivity(new Intent(getApplicationContext(), insertRepair.class));
+        }
+        else if (id==R.id.nav_searchPhone)
+        {
+            startActivity(new Intent(getApplicationContext(), searchNumber.class));
+        }
+        else if (id==R.id.nav_searchDate)
+        {
+            startActivity(new Intent(getApplicationContext(), searchDate.class));
+        }
+        else if (id==R.id.nav_update)
+        {
+            startActivity(new Intent(getApplicationContext(), updateRepair.class));
+        }
+        else if (id==R.id.nav_ticket)
+        {
+            startActivity(new Intent(getApplicationContext(), searchTicketNumber.class));
+        }
+        else if(id==R.id.nav_name)
+        {
+            startActivity(new Intent(getApplicationContext(), searchName.class));
+
+        }
+        else if (id==R.id.nav_collected)
+        {
+            startActivity(new Intent(getApplicationContext(), completedRepairs.class));
         }
         return true;
 

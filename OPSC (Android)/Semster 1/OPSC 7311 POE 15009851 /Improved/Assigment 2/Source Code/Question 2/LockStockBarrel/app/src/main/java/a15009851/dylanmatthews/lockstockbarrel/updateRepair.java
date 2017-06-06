@@ -29,7 +29,7 @@ public class updateRepair extends AppCompatActivity {
         repair = (EditText) findViewById(R.id.etUpdateRepair);
         repairOther = (EditText) findViewById(R.id.etUpdateRepairExtra);
         numItems = (EditText) findViewById(R.id.etNumItems);
-        number = (EditText) findViewById(R.id.etUpdateNumber);
+        number = (EditText) findViewById(R.id.etUpdateCellNumberNumber);
         co = (EditText) findViewById(R.id.etUpdateCost);
         id = (EditText) findViewById(R.id.etUpdateNumber);
     }
@@ -44,7 +44,7 @@ public class updateRepair extends AppCompatActivity {
         String reo = repairOther.getText().toString();
         String numI = numItems.getText().toString();
         String cell = number.getText().toString();
-        String cos = co.getText().toString();
+        String cos = "R" + co.getText().toString();
 
 
         dbAdapter.updateRepair(i,na, re, reo,numI,cell, cos);
