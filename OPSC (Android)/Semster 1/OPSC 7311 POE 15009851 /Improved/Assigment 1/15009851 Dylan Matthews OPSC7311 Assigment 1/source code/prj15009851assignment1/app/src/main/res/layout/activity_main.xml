@@ -263,15 +263,6 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignStart="@+id/btnp2SmallStraight" />
 
-            <Button
-                android:layout_width="45dp"
-                android:id="@+id/btn1P1"
-                android:layout_height="45dp"
-                android:onClick="onp1One"
-                android:layout_alignBaseline="@+id/ones"
-                android:layout_alignBottom="@+id/ones"
-                android:layout_alignStart="@+id/btn3P1" />
-
             <EditText
                 android:inputType="none"
                 android:text="@string/user2"
@@ -299,15 +290,6 @@
                 android:onClick="onp1Two"
                 android:layout_above="@+id/threes"
                 android:layout_alignStart="@+id/btn1P1" />
-
-            <Button
-                android:layout_width="45dp"
-                android:id="@+id/btn3P1"
-                android:layout_height="45dp"
-                android:onClick="onp1Three"
-                android:layout_marginStart="10dp"
-                android:layout_alignBottom="@+id/threes"
-                android:layout_toEndOf="@+id/User2" />
 
             <Button
                 android:layout_width="45dp"
@@ -420,6 +402,23 @@
                 android:onClick="onp2SmallStraight"
                 android:layout_above="@+id/btnp2largStraight"
                 android:layout_alignStart="@+id/btnp2largStraight" />
+
+            <Button
+                android:layout_width="45dp"
+                android:id="@+id/btn1P1"
+                android:layout_height="45dp"
+                android:onClick="onp1One"
+                android:layout_above="@+id/twos"
+                android:layout_alignStart="@+id/User2"
+                android:layout_marginStart="15dp" />
+
+            <Button
+                android:layout_width="45dp"
+                android:id="@+id/btn3P1"
+                android:layout_height="45dp"
+                android:onClick="onp1Three"
+                android:layout_alignBottom="@+id/threes"
+                android:layout_alignStart="@+id/btn2P2" />
 
 
         </RelativeLayout>

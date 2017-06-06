@@ -49,10 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 };
-        for (int i = 0; i<5;i++)
-        {
-            stay[i]=false;
-        }
+
 
 
 
@@ -66,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0;i<5;i++)
         {
-            if (!(stay[i]))
-            {
+
                 Random r  = new Random();
                 int rand = r.nextInt(7 )+1;
+         //   Toast.makeText(this, "Random number is " + rand, Toast.LENGTH_SHORT).show();
                 rolls[i] = rand;
 
                 if (i==0) {
@@ -87,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
                         one.setImageResource(ImageID[5]);
                     }
                 }
-                else if(i==1)
+
+            if(i==1)
                 {
                     if (rand == 1) {
                         two.setImageResource(ImageID[0]);
@@ -104,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-                else if(i==2)
+
+              if(i==2)
                 {
                     if (rand == 1) {
                         three.setImageResource(ImageID[0]);
@@ -121,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-                else if(i==3)
+
+            if(i==3)
                 {
                     if (rand == 1) {
                         four.setImageResource(ImageID[0]);
@@ -138,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-                else if(i==4)
+
+                 if(i==4)
                 {
                     if (rand == 1) {
                         five.setImageResource(ImageID[0]);
@@ -158,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-        }
+
         } catch (Exception e)
         {
             Log.e("blah", e.getMessage().toString());
@@ -660,8 +661,6 @@ public class MainActivity extends AppCompatActivity {
     public void onp14Kind(View v) {
         try {
 
-            for (int i=0;i<5;i++)
-                rolls[i] =4;
             Button btn = (Button) (findViewById(R.id.btn4KindP1));
             btn.setText(fourOfKind());
             scorep1 = scorep1 + Integer.parseInt(fourOfKind());
@@ -687,8 +686,11 @@ public class MainActivity extends AppCompatActivity {
         Boolean found;
         int score;
         int [] temp = new int [5];
+
+        for(int i=0; i<5 ;i++)
         temp = rolls;
-        Arrays.sort(temp);
+
+
         int cnt =0;
         for (int i=0; i<5-1;i++)
         {
