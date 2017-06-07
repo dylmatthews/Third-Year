@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-public class searchName extends AppCompatActivity {
+public class searchName extends base_activity {
 
     DbAdapter dbAdapter;
     EditText etName;
@@ -18,6 +18,7 @@ public class searchName extends AppCompatActivity {
         setContentView(R.layout.activity_search_name);
         etName = (EditText) findViewById(R.id.etNum);
         dbAdapter = new DbAdapter(this);
+        super.onCreateDrawer();
     }
 
     public void onSearch(View view)
@@ -27,7 +28,7 @@ public class searchName extends AppCompatActivity {
 
             //Toast.makeText(this,"Hello p", Toast.LENGTH_SHORT).show();
             Cursor dbCursor = dbAdapter.getRepairName(etName.getText().toString());
-            String allRepairRecords = " ";
+            String allRepairRecords = "";
             int cnt = 0;
 
             if (dbCursor.moveToFirst()) {

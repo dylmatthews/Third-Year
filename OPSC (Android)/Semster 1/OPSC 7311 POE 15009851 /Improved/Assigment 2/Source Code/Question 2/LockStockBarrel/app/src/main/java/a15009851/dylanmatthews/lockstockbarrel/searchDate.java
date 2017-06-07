@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class searchDate extends Activity implements View.OnClickListener{
+public class searchDate extends base_activity implements View.OnClickListener{
 
     EditText txtDate;
     DatePickerDialog date;
@@ -29,6 +29,7 @@ public class searchDate extends Activity implements View.OnClickListener{
         dbAdapter = new DbAdapter(this);
         txtDate.setInputType(0);
         txtDate.requestFocus();
+        super.onCreateDrawer();
 
 cal();
     }

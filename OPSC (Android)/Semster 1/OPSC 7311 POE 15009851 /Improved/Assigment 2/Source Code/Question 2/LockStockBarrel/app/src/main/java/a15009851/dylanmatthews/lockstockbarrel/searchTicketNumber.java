@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class searchTicketNumber extends AppCompatActivity {
+public class searchTicketNumber extends base_activity {
 
     DbAdapter dbAdapter;
     EditText etTicket;
@@ -20,6 +20,7 @@ public class searchTicketNumber extends AppCompatActivity {
 
         etTicket = (EditText) findViewById(R.id.etTicketNum);
         dbAdapter = new DbAdapter(this);
+        super.onCreateDrawer();
     }
 
     public void onSearch(View view)

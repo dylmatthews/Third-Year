@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class ViewResults extends AppCompatActivity {
+public class ViewResults extends base_activity {
 
     TextView displayResults;
     @Override
@@ -13,7 +13,7 @@ public class ViewResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_results);
         displayResults = (TextView) findViewById(R.id.tvDisplayResults);
-
+        super.onCreateDrawer();
         String results = getIntent().getStringExtra("results");
         if (results.equals(""))
         {

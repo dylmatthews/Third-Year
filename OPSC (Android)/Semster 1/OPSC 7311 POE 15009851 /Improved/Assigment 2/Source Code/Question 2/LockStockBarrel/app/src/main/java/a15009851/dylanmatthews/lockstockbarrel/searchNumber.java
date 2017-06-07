@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-public class searchNumber extends AppCompatActivity {
+public class searchNumber extends base_activity {
 
     DbAdapter dbAdapter;
     EditText etNumber;
@@ -18,6 +18,7 @@ public class searchNumber extends AppCompatActivity {
         setContentView(R.layout.activity_search_number);
         etNumber = (EditText) findViewById(R.id.etNum);
         dbAdapter = new DbAdapter(this);
+        super.onCreateDrawer();
     }
 
 

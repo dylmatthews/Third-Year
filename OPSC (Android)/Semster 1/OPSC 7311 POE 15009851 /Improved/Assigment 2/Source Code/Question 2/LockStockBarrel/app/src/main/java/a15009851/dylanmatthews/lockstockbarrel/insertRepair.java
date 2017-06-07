@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class insertRepair extends AppCompatActivity {
+public class insertRepair extends base_activity {
 
     DbAdapter dbAdapter;
     EditText name;
@@ -31,7 +32,8 @@ public class insertRepair extends AppCompatActivity {
     String cost = "R";
     String num="";
     String RepairRecord = "";
-    String no="";
+    String no="";;
+    private  base_activity ba;
 
 
 
@@ -46,6 +48,16 @@ public class insertRepair extends AppCompatActivity {
         numItems = (EditText) findViewById(R.id.etNumItems);
         number = (EditText) findViewById(R.id.etUpdateNumber);
         co = (EditText) findViewById(R.id.etUpdateCost);
+        try {
+
+
+           // ba = new base_activity();
+            super.onCreateDrawer();
+        }
+        catch (Exception e)
+        {
+            Log.e("Error", e.getMessage());
+        }
 
 
     }

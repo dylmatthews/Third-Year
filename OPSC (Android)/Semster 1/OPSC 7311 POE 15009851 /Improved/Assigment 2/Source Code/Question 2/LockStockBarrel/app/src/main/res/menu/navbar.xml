@@ -37,6 +37,10 @@
         <item android:title="Search Name"
             android:id="@+id/nav_name"
             android:icon="@drawable/ic_text_format_black_48dp" />
+        <item android:title="Help"
+            android:icon="@drawable/ic_help_black"
+            android:id="@+id/nav_help" />
+
     </group>
 
 

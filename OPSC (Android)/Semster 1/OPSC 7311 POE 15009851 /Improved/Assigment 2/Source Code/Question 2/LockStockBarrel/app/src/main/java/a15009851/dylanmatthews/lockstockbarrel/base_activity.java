@@ -77,6 +77,10 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
         {
             startActivity(new Intent(getApplicationContext(), searchByCompletedRepairs.class));
         }
+        else if (id == R.id.nav_help)
+        {
+            startActivity(new Intent(getApplicationContext(), help.class));
+        }
         return true;
 
     }

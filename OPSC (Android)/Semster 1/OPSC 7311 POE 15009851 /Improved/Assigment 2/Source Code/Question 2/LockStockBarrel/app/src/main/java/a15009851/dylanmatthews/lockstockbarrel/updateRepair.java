@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import static java.lang.Long.parseLong;
 
-public class updateRepair extends AppCompatActivity {
+public class updateRepair extends base_activity {
 
     DbAdapter dbAdapter;
     EditText name;
@@ -32,6 +32,7 @@ public class updateRepair extends AppCompatActivity {
         number = (EditText) findViewById(R.id.etUpdateCellNumberNumber);
         co = (EditText) findViewById(R.id.etUpdateCost);
         id = (EditText) findViewById(R.id.etUpdateNumber);
+        super.onCreateDrawer();
     }
 
 

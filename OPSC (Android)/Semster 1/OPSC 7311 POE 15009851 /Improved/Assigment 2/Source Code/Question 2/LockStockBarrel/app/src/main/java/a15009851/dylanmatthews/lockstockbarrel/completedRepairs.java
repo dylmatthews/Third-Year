@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class completedRepairs extends AppCompatActivity {
+public class completedRepairs extends base_activity {
 
 
     DbAdapter dbAdapter;
@@ -33,6 +33,7 @@ public class completedRepairs extends AppCompatActivity {
         setContentView(R.layout.activity_completed_repairs);
         dbAdapter = new DbAdapter(this);
         etTicket = (EditText) findViewById(R.id.etSearchTicketNum);
+        super.onCreateDrawer();
     }
     public void toast(String t)
     {

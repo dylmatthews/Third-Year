@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class searchAll extends AppCompatActivity {
+public class searchAll extends base_activity {
 
     DbAdapter dbAdapter;
     TextView displayResults;
@@ -19,6 +19,7 @@ public class searchAll extends AppCompatActivity {
         dbAdapter = new DbAdapter(this);
         displayResults = (TextView) findViewById(R.id.tvDisplayResults);
         fullResults();
+        super.onCreateDrawer();
     }
 
 

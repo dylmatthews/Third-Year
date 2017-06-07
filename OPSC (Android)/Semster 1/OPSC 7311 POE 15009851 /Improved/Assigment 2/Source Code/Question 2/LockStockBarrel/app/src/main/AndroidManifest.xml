@@ -34,6 +34,7 @@
         <activity android:name=".insertRepair" />
         <activity android:name=".searchByCompletedRepairs" />
         <activity android:name=".updateRepair" />
+        <activity android:name=".help"></activity>
     </application>
 
 </manifest>

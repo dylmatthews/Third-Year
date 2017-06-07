@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class searchByCompletedRepairs extends AppCompatActivity {
+public class searchByCompletedRepairs extends base_activity {
 
     DbAdapter dbAdapter;
     @Override
@@ -16,6 +16,7 @@ public class searchByCompletedRepairs extends AppCompatActivity {
         setContentView(R.layout.activity_search_by_completed_repairs);
         dbAdapter = new DbAdapter(this);
         dbAdapter.open();
+        super.onCreateDrawer();
     }
 
     public void onShowCompleted(View view) {
