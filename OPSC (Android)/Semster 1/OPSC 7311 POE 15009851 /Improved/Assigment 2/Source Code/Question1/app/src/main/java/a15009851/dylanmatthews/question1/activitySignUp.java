@@ -33,10 +33,10 @@ public class activitySignUp extends AppCompatActivity {
         }
         else {
             try {
-                FileOutputStream fOut = openFileOutput("login.txt", MODE_APPEND);
+                FileOutputStream fOut = openFileOutput("login.txt", MODE_APPEND); //opens file to write to it
                 OutputStreamWriter osw = new OutputStreamWriter(fOut);
 
-                osw.write(name + "#" + password + "\n");
+                osw.write(name + "#" + password + "\n"); //writes to file
                 osw.close();
                 toast("File Saved Successfully");
 
@@ -56,7 +56,7 @@ public class activitySignUp extends AppCompatActivity {
         String name = na.getText().toString();
         String passwo = pass.getText().toString();
         String conpass = cpass.getText().toString();
-        if (passwo.equals(conpass))
+        if (passwo.equals(conpass)) //checks passwords match
         {
             writeTOFile(name,passwo, conpass);
         }

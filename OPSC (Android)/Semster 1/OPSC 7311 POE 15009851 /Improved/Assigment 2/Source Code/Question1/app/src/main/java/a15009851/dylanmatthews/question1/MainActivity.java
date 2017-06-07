@@ -13,21 +13,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClickLogin(View view)
+    public void onClickLogin(View view) //switches activities
     {
         Intent login = new Intent(this,activityLogin.class) ;
         startActivity(login);
 
     }
 
-    public void onClickSignUp(View view)
+    public void onClickSignUp(View view) //switches activities
     {
         Intent signUp = new Intent(this, activitySignUp.class);
         startActivity(signUp);
     }
 
 
-    public void onForgotPassword(View view)
+    public void onForgotPassword(View view) //switches activities
     {
         Intent resetpass = new Intent(this, resetPassword.class);
         startActivity(resetpass);

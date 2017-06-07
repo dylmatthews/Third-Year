@@ -13,12 +13,12 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    public void onPlay(View view)
+    public void onPlay(View view) //switches activities
     {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
-    public void onRules(View view)
+    public void onRules(View view) //switches activities
     {
         startActivity(new Intent(getApplicationContext(), rules.class));
     }

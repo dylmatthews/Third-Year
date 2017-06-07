@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
         {
 
                 Random r  = new Random();
-                int rand = r.nextInt(7 )+1;
+                int rand = r.nextInt(7 )+1; //random number for value
          //   Toast.makeText(this, "Random number is " + rand, Toast.LENGTH_SHORT).show();
                 rolls[i] = rand;
 
-                if (i==0) {
+                if (i==0) { //sets dice 1 to correct image
                     if (rand == 1) {
                         one.setImageResource(ImageID[0]);
                     } else if (rand == 2) {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-            if(i==1)
+            if(i==1) //sets dice 2 to correct image
                 {
                     if (rand == 1) {
                         two.setImageResource(ImageID[0]);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-              if(i==2)
+              if(i==2) //sets dice 3 to correct image
                 {
                     if (rand == 1) {
                         three.setImageResource(ImageID[0]);
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-            if(i==3)
+            if(i==3) //sets dice 4 to correct image
                 {
                     if (rand == 1) {
                         four.setImageResource(ImageID[0]);
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                 if(i==4)
+                 if(i==4) //sets dice 5 to correct image
                 {
                     if (rand == 1) {
                         five.setImageResource(ImageID[0]);
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button p1One = (Button) (findViewById(R.id.btn1P1));
-            p1One.setText(Ones());
+            p1One.setText(Ones()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Ones());
         } catch (Exception e)
         {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button p2One = (Button) (findViewById(R.id.btn1P2));
-            p2One.setText(Ones());
+            p2One.setText(Ones()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(Ones());
         } catch (Exception e)
         {
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button p1Twos = (Button) (findViewById(R.id.btn2P2));
-            p1Twos.setText(Twos());
+            p1Twos.setText(Twos());//gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Twos());
         } catch (Exception e)
         {
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button p2Twos = (Button) (findViewById(R.id.btn2P1));
-            p2Twos.setText(Twos());
+            p2Twos.setText(Twos()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(Twos());
         } catch (Exception e)
         {
@@ -282,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn3P1));
-            btn.setText(Threes());
+            btn.setText(Threes()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Threes());
         } catch (Exception e)
         {
@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn3P2));
-            btn.setText(Threes());
+            btn.setText(Threes()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(Threes());
         } catch (Exception e)
         {
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn4P1));
-            btn.setText(Fours());
+            btn.setText(Fours()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Fours());
         } catch (Exception e)
         {
@@ -372,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn5P1));
-            btn.setText(Fives());
+            btn.setText(Fives()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Fives());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -384,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn5P2));
-            btn.setText(Fives());
+            btn.setText(Fives()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(Fives());
         } catch (Exception e)
         {
@@ -414,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn6P1));
-            btn.setText(Sixs());
+            btn.setText(Sixs()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(Sixs());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -427,7 +427,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn6P2));
-            btn.setText(Sixs());
+            btn.setText(Sixs()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(Sixs());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -537,7 +537,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn3KindP1));
-            btn.setText((threeOfKind()));
+            btn.setText((threeOfKind())); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(threeOfKind());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -549,7 +549,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn3KindP2));
-            btn.setText((threeOfKind()));
+            btn.setText((threeOfKind())); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(threeOfKind());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -662,7 +662,7 @@ public class MainActivity extends AppCompatActivity {
         try {
 
             Button btn = (Button) (findViewById(R.id.btn4KindP1));
-            btn.setText(fourOfKind());
+            btn.setText(fourOfKind()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(fourOfKind());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -674,7 +674,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btn4KindP2));
-            btn.setText(fourOfKind());
+            btn.setText(fourOfKind()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(fourOfKind());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -717,7 +717,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp1SmallStraight));
-            btn.setText(smallStraight());
+            btn.setText(smallStraight());  //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(smallStraight());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -729,7 +729,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp2SmallStraight));
-            btn.setText(smallStraight());
+            btn.setText(smallStraight());//gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(smallStraight());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -769,7 +769,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp1largStraight));
-            btn.setText(largeStraight());
+            btn.setText(largeStraight()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(largeStraight());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -781,7 +781,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp2largStraight));
-            btn.setText(largeStraight());
+            btn.setText(largeStraight()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(largeStraight());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -817,7 +817,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp1Yahtzee));
-            btn.setText(yahtzee());
+            btn.setText(yahtzee()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(yahtzee());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -830,7 +830,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnp2Yahtzee));
-            btn.setText(yahtzee());
+            btn.setText(yahtzee()); //gets score and set it in the button
             scorep2= scorep2 + Integer.parseInt(yahtzee());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -849,7 +849,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnFullHouseP1));
-            btn.setText(fullHouse());
+            btn.setText(fullHouse()); //gets score and set it in the button
             scorep1 = scorep1 + Integer.parseInt(fullHouse());
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
@@ -862,7 +862,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button btn = (Button) (findViewById(R.id.btnFullHouseP2));
-            btn.setText(fullHouse());
+            btn.setText(fullHouse()); //gets score and set it in the button
         } catch (Exception e) {
             Log.e("blah", e.getMessage().toString());
         }

@@ -14,31 +14,31 @@ public class home extends base_activity {
         super.onCreateDrawer();
     }
 
-    public void onSearch(View view)
+    public void onSearch(View view) //switches activities
     {
         Intent search = new Intent(this, activity_searchBY.class);
         startActivity(search);
     }
 
-    public  void onRepairFetched(View view)
+    public  void onRepairFetched(View view) //switches activities
     {
         Intent fetched = new Intent(this, completedRepairs.class);
         startActivity(fetched);
     }
 
-    public void onInsert(View view)
+    public void onInsert(View view) //switches activities
     {
         Intent fetched = new Intent(this, insertRepair.class);
         startActivity(fetched);
     }
 
-    public void onSearchFetched(View view)
+    public void onSearchFetched(View view) //switches activities
     {
        Intent com = new Intent(this, searchByCompletedRepairs.class);
         startActivity(com);
     }
 
-    public void onUpdatebtn(View view)
+    public void onUpdatebtn(View view)//switches activities
     {
         Intent update = new Intent(this, updateRepair.class);
         startActivity(update);

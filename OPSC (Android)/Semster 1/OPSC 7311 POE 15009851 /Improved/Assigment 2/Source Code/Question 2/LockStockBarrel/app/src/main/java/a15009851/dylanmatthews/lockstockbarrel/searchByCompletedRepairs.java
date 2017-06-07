@@ -21,7 +21,7 @@ public class searchByCompletedRepairs extends base_activity {
 
     public void onShowCompleted(View view) {
         try {
-            Cursor dbCursor = dbAdapter.getAllCompleted();
+            Cursor dbCursor = dbAdapter.getAllCompleted(); //gets all completed repairs
             String allRepairRecords = "";
             int cnt = 0;
 

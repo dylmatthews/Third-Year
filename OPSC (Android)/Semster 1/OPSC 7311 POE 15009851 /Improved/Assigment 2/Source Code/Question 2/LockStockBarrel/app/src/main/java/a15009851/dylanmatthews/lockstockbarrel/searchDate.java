@@ -37,7 +37,7 @@ cal();
         txtDate.setOnClickListener(this);
        Calendar newCalendar = Calendar.getInstance();
         date = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) { //date picket
                 Calendar newDate = Calendar.getInstance();
                 newDate.set(year, monthOfYear, dayOfMonth);
               txtDate.setText(dateFormatter.format(newDate.getTime()));
@@ -57,7 +57,7 @@ cal();
         dbAdapter.open();
 
         //Toast.makeText(this,"Hello p", Toast.LENGTH_SHORT).show();
-        Cursor dbCursor = dbAdapter.getRepairDate(txtDate.getText().toString());
+        Cursor dbCursor = dbAdapter.getRepairDate(txtDate.getText().toString()); //searches for entries on the date chosen
         String allRepairRecords = "";
         int cnt =0;
 
@@ -95,7 +95,7 @@ cal();
         dbAdapter.close();
       //Toast.makeText(this, allRepairRecords+ "Hello", Toast.LENGTH_SHORT).show();
         Intent vr = new Intent(this, ViewResults.class);
-        vr.putExtra("results",allRepairRecords);
+        vr.putExtra("results",allRepairRecords); //sends it with the intent
         startActivity(vr);
 
 

@@ -39,10 +39,10 @@ public class activityLogin extends AppCompatActivity {
         try {
             FileInputStream objInput = openFileInput("login.txt");
 
-            objRead = new BufferedReader(new InputStreamReader((objInput)));
+            objRead = new BufferedReader(new InputStreamReader((objInput))); //opens file
             while((line=objRead.readLine())!=null)
             {
-                String [] temp = line.split("#");
+                String [] temp = line.split("#"); //splits line on a hash
                 user.add(temp[0]);
                 password.add(temp[1]);
                //textFileData += line + "\n";

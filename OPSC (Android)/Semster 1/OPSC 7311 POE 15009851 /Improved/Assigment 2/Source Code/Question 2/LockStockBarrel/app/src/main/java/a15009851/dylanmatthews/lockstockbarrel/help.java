@@ -19,6 +19,6 @@ public class help extends base_activity {
                 "I then made sure to include lots of ways to search for their ticket number.\nOnce somebody comes to collect their repair, the people at the shop " +
                 "stamp the ticket in the book to say its been fetched. For this i made it so it moves the repair info into a completed repairs table.\n" +
                 "On inserting doesn't matter if cost is empty, part of the business strategy if the person doesn't know then the person who serves charges on the collection. Repairs other is an extra field can be empty it's for if they want it done by an date or another repair\n" +
-                "All icons used were taken from https://material.io/icons with a free licence to use");
+                "All icons used were taken from https://material.io/icons with a free licence to use"); //displays help stuff
     }
 }

@@ -15,31 +15,31 @@ public class activity_searchBY extends base_activity {
 
     }
 
-    public void searchName(View view)
+    public void searchName(View view) //switches activities
     {
         Intent searchName = new Intent(this, searchName.class);
         startActivity(searchName);
     }
 
-    public void searchNumber(View view)
+    public void searchNumber(View view) //switches activities
     {
         Intent searchNumber = new Intent(this, searchNumber.class);
         startActivity(searchNumber);
     }
 
-    public void searchDate(View view)
+    public void searchDate(View view) //switches activities
     {
         Intent searchDate = new Intent(this, searchDate.class);
         startActivity(searchDate);
     }
 
-    public void searchTicketNumber(View view)
+    public void searchTicketNumber(View view) //switches activities
     {
         Intent searchTicketNum = new Intent(this, searchTicketNumber.class);
         startActivity(searchTicketNum);
     }
 
-    public void searchALL(View view)
+    public void searchALL(View view) //switches activities
     {
         Intent search = new Intent(this, searchAll.class);
         startActivity(search);

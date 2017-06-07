@@ -31,7 +31,7 @@ public class searchAll extends base_activity {
         dbAdapter.open();
 
 
-        Cursor dbCursor = dbAdapter.getAllRepairs();
+        Cursor dbCursor = dbAdapter.getAllRepairs(); //gets all entries
         String allRepairRecords = "";
         int cnt =0;
 

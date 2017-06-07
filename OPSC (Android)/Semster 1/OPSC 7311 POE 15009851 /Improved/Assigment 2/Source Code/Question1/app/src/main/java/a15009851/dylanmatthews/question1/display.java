@@ -25,7 +25,7 @@ public class display extends AppCompatActivity {
         try {
             FileInputStream objInput = openFileInput("login.txt");
 
-            objRead = new BufferedReader(new InputStreamReader((objInput)));
+            objRead = new BufferedReader(new InputStreamReader((objInput))); //opens up file
             while((line=objRead.readLine())!=null)
             {
                output+= line + "\n";
@@ -33,7 +33,7 @@ public class display extends AppCompatActivity {
                 //textFileData += line + "\n";
 
             }
-            tv.setText(output);
+            tv.setText(output); //sets text to make report
 
 
         }

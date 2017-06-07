@@ -19,6 +19,6 @@ public class rules extends AppCompatActivity {
                 "\n" +
                 "Once a player selects what he/she wants to use the dice throw for points the device must be passed over to the next user.\n" +
                 "\n" +
-                "Only one move must be made at a time players move.\n");
+                "Only one move must be made at a time players move.\n"); //displays rules
     }
 }

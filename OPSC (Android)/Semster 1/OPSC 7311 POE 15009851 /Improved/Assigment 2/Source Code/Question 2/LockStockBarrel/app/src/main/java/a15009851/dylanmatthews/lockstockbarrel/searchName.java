@@ -27,7 +27,7 @@ public class searchName extends base_activity {
             dbAdapter.open();
 
             //Toast.makeText(this,"Hello p", Toast.LENGTH_SHORT).show();
-            Cursor dbCursor = dbAdapter.getRepairName(etName.getText().toString());
+            Cursor dbCursor = dbAdapter.getRepairName(etName.getText().toString()); //searches for names like this
             String allRepairRecords = "";
             int cnt = 0;
 
@@ -62,7 +62,7 @@ public class searchName extends base_activity {
             dbAdapter.close();
             //Toast.makeText(this, allRepairRecords+ "Hello", Toast.LENGTH_SHORT).show();
             Intent vr = new Intent(this, ViewResults.class);
-            vr.putExtra("results", allRepairRecords);
+            vr.putExtra("results", allRepairRecords); //sends text with intent
             startActivity(vr);
         }
         catch (Exception e)

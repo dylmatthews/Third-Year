@@ -20,7 +20,7 @@ public class updateRepair extends base_activity {
     EditText co;
     EditText id;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //decelerations
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_repair);
         dbAdapter = new DbAdapter(this);
@@ -48,7 +48,7 @@ public class updateRepair extends base_activity {
         String cos = "R" + co.getText().toString();
 
 
-        dbAdapter.updateRepair(i,na, re, reo,numI,cell, cos);
+        dbAdapter.updateRepair(i,na, re, reo,numI,cell, cos); //updates
         Toast.makeText(this, "Update Successful", Toast.LENGTH_SHORT).show();
         Intent home  = new Intent(this, home.class);
         startActivity(home);

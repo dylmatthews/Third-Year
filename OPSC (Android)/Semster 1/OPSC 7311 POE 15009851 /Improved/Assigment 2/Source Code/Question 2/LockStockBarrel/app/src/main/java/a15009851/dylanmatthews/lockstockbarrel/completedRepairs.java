@@ -35,10 +35,10 @@ public class completedRepairs extends base_activity {
         etTicket = (EditText) findViewById(R.id.etSearchTicketNum);
         super.onCreateDrawer();
     }
-    public void toast(String t)
+    public void toast(String t) //made this toast method to make it easy to make a toast and to centre the toast
     {
         Toast output= Toast.makeText(this, t, Toast.LENGTH_SHORT);
-        output.setGravity(Gravity.CENTER,0,0);
+        output.setGravity(Gravity.CENTER,0,0); //centres the toast
         output.show();
     }
 
@@ -47,7 +47,7 @@ public class completedRepairs extends base_activity {
         try
         {
             dbAdapter.open();
-            Cursor dbCursor = dbAdapter.getRepairTicket(Integer.parseInt(etTicket.getText().toString()));
+            Cursor dbCursor = dbAdapter.getRepairTicket(Integer.parseInt(etTicket.getText().toString()));//selects data
             ticketNum =  dbCursor.getInt(0);
             name = dbCursor.getString(1);
             repair = dbCursor.getString(2);
@@ -56,9 +56,9 @@ public class completedRepairs extends base_activity {
             number= dbCursor.getString(5);
             DateIn = dbCursor.getString(6);
             Cost = dbCursor.getString(7);
-            Dateout = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-            dbAdapter.deleteRepair(ticketNum);
-            dbAdapter.insertIntoCompleted(ticketNum,name,repair, repairOther, items, number, DateIn, Dateout, Cost);
+            Dateout = new SimpleDateFormat("dd-MM-yyyy").format(new Date()); //gets current phone date
+            dbAdapter.deleteRepair(ticketNum); //deletes it from the repair table
+            dbAdapter.insertIntoCompleted(ticketNum,name,repair, repairOther, items, number, DateIn, Dateout, Cost); //inserts into completed table
             toast("moved done");
        }
         catch(Exception e) {

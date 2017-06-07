@@ -29,7 +29,7 @@ public class searchTicketNumber extends base_activity {
             dbAdapter.open();
 
             //Toast.makeText(this,"Hello p", Toast.LENGTH_SHORT).show();
-            Cursor dbCursor = dbAdapter.getRepairTicket(Integer.parseInt(etTicket.getText().toString()));
+            Cursor dbCursor = dbAdapter.getRepairTicket(Integer.parseInt(etTicket.getText().toString())); //searches for exact ticket number
             String allRepairRecords = "";
             int cnt = 0;
 
@@ -65,7 +65,7 @@ public class searchTicketNumber extends base_activity {
             //Toast.makeText(this, allRepairRecords+ "Hello", Toast.LENGTH_SHORT).show();
             Intent vr = new Intent(this, ViewResults.class);
             vr.putExtra("results", allRepairRecords);
-            startActivity(vr);
+            startActivity(vr); //sends result with intent
         }
         catch (Exception e)
         {

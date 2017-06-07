@@ -33,12 +33,11 @@ public class insertRepair extends base_activity {
     String num="";
     String RepairRecord = "";
     String no="";;
-    private  base_activity ba;
 
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //declares
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dbAdapter = new DbAdapter(this);
@@ -50,8 +49,6 @@ public class insertRepair extends base_activity {
         co = (EditText) findViewById(R.id.etUpdateCost);
         try {
 
-
-           // ba = new base_activity();
             super.onCreateDrawer();
         }
         catch (Exception e)
@@ -86,7 +83,7 @@ public class insertRepair extends base_activity {
                 toast("there are some fields which are empty");
             } else {
                 dbAdapter.open();
-                dbAdapter.insertRepair(nam, repai, ro, numI, num, date, cost);
+                dbAdapter.insertRepair(nam, repai, ro, numI, num, date, cost); //inserts
                 toast("Add Successfully");
 
                     Cursor dbCursor = dbAdapter.getAllRepairs();
@@ -149,7 +146,7 @@ public class insertRepair extends base_activity {
           //  toast(no);
 
 
-            smsManager.sendTextMessage(no, null, mess, null, null);
+            smsManager.sendTextMessage(no, null, mess, null, null); //sends out an sms to the number and the ticket details
         }
         catch (Exception e)
         {

@@ -17,10 +17,8 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
 
 
     private NavigationView navigationView;
-   // private DrawerLayout drawerLayout;
-    //private ActionBarDrawerToggle tongle;
 
-    protected void onCreateDrawer() {
+    protected void onCreateDrawer() { //sets drawer
         navigationView = (NavigationView) findViewById(R.id.nav_view);
        navigationView.setNavigationItemSelectedListener(this);
     }
@@ -32,7 +30,7 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
 
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) { // this override method looks to see which nav item has been clicked and goes to the correct screen
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         //Toast.makeText(this, "going to " + id, Toast.LENGTH_SHORT).show();

@@ -28,7 +28,7 @@ public class searchNumber extends base_activity {
             dbAdapter.open();
 
 
-            Cursor dbCursor = dbAdapter.getRepairCellphoneNumber(etNumber.getText().toString());
+            Cursor dbCursor = dbAdapter.getRepairCellphoneNumber(etNumber.getText().toString()); //searches for phone numbers like this
             String allRepairRecords = "";
             int cnt = 0;
 
@@ -63,7 +63,7 @@ public class searchNumber extends base_activity {
             dbAdapter.close();
 
             Intent vr = new Intent(this, ViewResults.class);
-            vr.putExtra("results", allRepairRecords);
+            vr.putExtra("results", allRepairRecords);//sends result with intent
             startActivity(vr);
         }
         catch (Exception e)
