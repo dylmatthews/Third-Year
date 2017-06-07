@@ -119,6 +119,7 @@ public class insertRepair extends base_activity {
 
                 // DisplayRepairs(allTeamRecords);
                 dbAdapter.close();
+
                 //dbAdapter.close();
 
             }
@@ -139,13 +140,13 @@ public class insertRepair extends base_activity {
     {
         try {
             String mess = RepairRecord;
-            toast(mess);
+         //   toast(mess);
             SmsManager smsManager = SmsManager.getDefault();
 
             no = "+27" + no.substring(1); //substring at 1 to get rid of the 0, needs to be intentional number
 
 
-            toast(no);
+          //  toast(no);
 
 
             smsManager.sendTextMessage(no, null, mess, null, null);

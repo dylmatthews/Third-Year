@@ -67,7 +67,7 @@ public class searchName extends base_activity {
         }
         catch (Exception e)
         {
-            Log.e("shit", e.getMessage());
+            Log.e("blah", e.getMessage());
         }
     }
 }
