@@ -18,6 +18,12 @@
         <item android:title="Update Repair"
             android:id="@+id/nav_update"
             android:icon="@drawable/ic_update_black_48dp" />
+        <item android:title="See Complated Repairs"
+            android:id="@+id/nav_viewCompleted"
+            android:icon="@drawable/ic_done_all_black_48dp" />
+        <item android:title="Search All"
+            android:icon="@drawable/ic_all_out_black_48dp"
+            android:id="@+id/nav_all" />
     <item android:title="Search Date"
         android:icon="@drawable/ic_date_range_black_24dp"
         android:id="@+id/nav_searchDate" />

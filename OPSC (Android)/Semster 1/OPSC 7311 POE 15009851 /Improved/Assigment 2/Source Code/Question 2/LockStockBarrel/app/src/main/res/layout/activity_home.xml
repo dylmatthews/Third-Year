@@ -38,27 +38,6 @@
         android:onClick="onSearchFetched" />
 
         <Button
-            android:text="Add Repair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnInsert"
-            android:onClick="onInsert"
-            android:layout_above="@+id/btnSearch"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="27dp"
-            android:layout_alignParentEnd="true" />
-
-        <Button
-            android:text="Update A Repair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnUpdateRe"
-            android:onClick="onUpdatebtn"
-            android:layout_above="@+id/btnInsert"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" />
-
-        <Button
             android:text="Search Repairs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,6 +47,28 @@
             android:layout_above="@+id/btnRepairFetched"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Update A Repair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdateRe"
+            android:onClick="onUpdatebtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="54dp"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Add Repair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInsert"
+            android:onClick="onInsert"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/btnUpdateRe"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView

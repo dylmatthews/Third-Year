@@ -69,6 +69,14 @@ public class base_activity extends Activity   implements NavigationView.OnNaviga
         {
             startActivity(new Intent(getApplicationContext(), completedRepairs.class));
         }
+        else if (id==R.id.nav_all)
+        {
+            startActivity(new Intent(getApplicationContext(), searchAll.class));
+        }
+        else if (id==R.id.nav_viewCompleted)
+        {
+            startActivity(new Intent(getApplicationContext(), searchByCompletedRepairs.class));
+        }
         return true;
 
     }

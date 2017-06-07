@@ -29,7 +29,7 @@ public class searchTicketNumber extends AppCompatActivity {
 
             //Toast.makeText(this,"Hello p", Toast.LENGTH_SHORT).show();
             Cursor dbCursor = dbAdapter.getRepairTicket(Integer.parseInt(etTicket.getText().toString()));
-            String allRepairRecords = " ";
+            String allRepairRecords = "";
             int cnt = 0;
 
             if (dbCursor.moveToFirst()) {
